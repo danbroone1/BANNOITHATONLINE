@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="bannoithatonline">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Thanh toán thành công</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body ng-controller="chiTietDonHangController">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var title = (vnp_TransactionStatus === '00') ? 'Thanh toán thành công' : 'Thanh toán thất bại';
+            var icon = (vnp_TransactionStatus === '00') ? 'success' : 'error';
+            var formattedAmount = (vnp_Amount / 100).toLocaleString('vi-VN', {
+                style: 'currency',
+                currency: 'VND'
+            });
+
+            Swal.fire({
+                title: title,
+                html:
+                    '<p>Trạng thái thanh toán: <strong>' + vnp_TransactionStatus + '</strong></p>' +
+                    '<p>Thời gian: <strong>' + paymentTime + '</strong></p>' +
+                    '<p>Số tiền thanh toán: <strong>' + formattedAmount + '</strong></p>',
+                icon: icon,
+                confirmButtonText: 'Đóng',
+                timer: 3000
+            }).then((resp) => {
+                window.location.href = '/order';
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <script th:inline="javascript">
+        var vnp_TransactionStatus = [[${ vnp_TransactionStatus }]];
+        var vnp_BankCode = [[${ vnp_BankCode }]];
+        var paymentTime = [[${ paymentTime }]];
+        var vnp_Amount = [[${ vnp_Amount }]];
+    </script>
+
+
+
+    <script src="js/user/donhang.js"></script>
+</body>
+
+</html>

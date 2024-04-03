@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bannoithatonline">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kimi is a curated foods and beverages artisans.">
+    <meta name="author" content="Johnson Chandra, Allysa Prabandani, Philipus Herlambang, Maya Editorial">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+
+    <meta name="twitter:card" content="summary">
+    <meta name="title" content="Back to Kimi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Language" content="en-id">
+
+
+    <!-- open graph metadata facebook, slack, whatsapp line -->
+    <meta property="fb:app_id" content="150112802189143"/>
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Back to Kimi" />
+    <meta property='og:site_name' content='Kimi | Curated Foods and Beverages' />
+    <meta property="og:url" content="http://kimistatic.s3-website-ap-southeast-1.amazonaws.com/" />
+    <meta property="og:description" content="Kimi is a curated foods and beverages artisans." />
+    <meta property='og:image' content="https://s3-ap-southeast-1.amazonaws.com/kimistatic/images/apple-touch-icon.png" />
+
+
+    <!-- open graph metadata twitter -->
+    <meta name="twitter:title" content="Back to Kimi">
+    <meta name="twitter:url" content="http://www.backtokimi.com">
+    <meta name="twitter:description" content="Kimi is a curated foods and beverages artisans.">
+    <meta name="twitter:image" content="https://s3-ap-southeast-1.amazonaws.com/kimistatic/images/apple-touch-icon.png">
+    <meta name="twitter:site" content="@backtokimi">
+
+
+    <link rel="icon" href="https://s3-ap-southeast-1.amazonaws.com/kimistatic/images/favicon.ico">
+    <link rel="apple-touch-icon" href="https://s3-ap-southeast-1.amazonaws.com/kimistatic/images/apple-touch-icon.png">
+
+    <title>Shopping Cart</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/kimi.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="canonical" href="https://baya.vn/">
+    <link rel="alternate" href="https://baya.vn/" hreflang="vi-vn">
+    <meta name="keywords" content="Baya">
+
+    <meta name="robots" content="index,follow,noodp">
+    <link rel="stylesheet" href="/taiNguyenCuaDung/css/index.css">
+
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="https://baya.vn">
+    <link rel="dns-prefetch" href="//hstatic.net">
+    <link rel="dns-prefetch" href="//theme.hstatic.net/">
+    <link rel="dns-prefetch" href="//product.hstatic.net/">
+    <link rel="dns-prefetch" href="//file.hstatic.net/">
+    <link rel="dns-prefetch" href="//www.google-analytics.com/">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com/">
+    <link rel="dns-prefetch" href="//www.google.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.facebook.com">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+    <link rel="dns-prefetch" href="//static.ak.facebook.com">
+    <link rel="dns-prefetch" href="//static.ak.fbcdn.net">
+    <link rel="dns-prefetch" href="//s-static.ak.facebook.com">
+
+    <link rel="stylesheet" href="/taiNguyenCuaDung/css/indexcolor.css">
+
+
+
+
+    <link rel="preconnect" href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;display=swap"
+        crossorigin="">
+    <link rel="preload stylesheet" href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;display=swap"
+        as="style">
+    <link rel="preload" href="//theme.hstatic.net/200000796751/1001150659/14/fontawesome-webfont.woff?v=788" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="//theme.hstatic.net/200000796751/1001150659/14/fontawesome-webfont.woff2?v=788" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <!--+++++++++++++ CSS THEME ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <link rel="stylesheet" href="/taiNguyenCuaDung/css/theme1.css">
+
+    <link rel="stylesheet" href="/taiNguyenCuaDung/css/theme2.css">
+
+    <link rel="stylesheet" href="/taiNguyenCuaDung/css/theme3.css">
+
+    <link rel="stylesheet" href="/taiNguyenCuaThang/css/chat.css">
+
+    <link rel="stylesheet" href="../taiNguyenCuaDung/css/themes.scss.css">
+    <!--+++++++++++++ JS THEME ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <script type="text/javascript" src="/taiNguyenCuaDung/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/taiNguyenCuaDung/js/theme.js"></script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" name="description" content="">
+    <meta property="og:image" content="http://theme.hstatic.net/200000796751/1001150659/14/share_fb_home.png?v=788">
+    <meta property="og:image:secure_url"
+        content="https://theme.hstatic.net/200000796751/1001150659/14/share_fb_home.png?v=788">
+    <meta property="og:description" name="description" content="">
+    <meta property="og:url" content="https://baya.vn/">
+    <meta property="og:site_name" content="Baya">
+
+    <!-- SEO META DESCRIPTION -->
+    <meta name="description" content="Baya - Siêu thị nội thất &amp; trang trí Baya">
+    <!-- END SEO META DESCRIPTION -->
+    <style>
+        .grecaptcha-badge {
+            visibility: hidden;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+.custom-popup-class {
+  width: 400px; /* Đặt chiều rộng mong muốn */
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: space-between; /* Đặt khoảng trống giữa icon và title */
+}
+
+.custom-title-class {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+
+
+</style>
+
+</head>
+
+<body ng-controller="CartController">
+    <div data-th-insert="~{include/navbar.html}"></div>
+
+
+
+
+<div class="container-fluid">
+
+    <div class="kimi-container">
+        
+
+
+        <div class="row">
+            <div class="col-md-8">
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="section-title" style="font-size: 25px;"><strong>Giỏ hàng của bạn</strong></h3>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <h3 class="section-title">
+                            <button ng-click="selectAll()" class="btn btn-primary">Chọn tất cả</button>
+                            <button class="btn btn-danger" ng-click="deleteAll()">Xóa tất cả</button>
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-md-12 mt-3" ng-if="listCart.length === 0">
+                    <div class="alert alert-info" role="alert">
+                        Giỏ hàng của bạn hiện tại chưa có sản phẩm.
+                    </div>
+                    <a class="btn btn-danger" href="index">Thêm sản phẩm</a>
+                </div>
+                <div class="box-bg-white col-md-12"  ng-repeat="cart in listCart">
+                    <div class="row">
+                        <div class="col-md-1 col-xs-2">
+                            <input type="checkbox" ng-model="cart.isSelected" ng-click="checkboxClicked(cart)" style="margin:40%;margin-top:140%;transform: scale(1.5);" />
+                        </div>
+                        
+                        <div class="col-md-2 col-xs-6 less-padding-right">
+                            <img ng-src="{{cart.imageUrl}}" width="100%" class="img-thumbnail">
+                        </div>
+                        <div class="col-md-3 col-xs-12">
+                            <span>{{cart.product.productname}}</span><br/>
+                            <p class="text-gray-3 text-thin"></p>
+                            <p class="section-title">{{cart.product.pricexuat |  currency:'':0}} VND</p>
+                            <button class="btn btn-warning outline-default-button outline-small-default-button text-black" ng-click="deleteProduct(cart)">Xóa</button>
+                        </div>
+
+                        <div class="col-md-4 col-xs-7">
+                            <p>Số lượng</p>
+                            <form class="form-inline">
+                                <div class="form-group pull-left"><button class="btn btn-default" ng-click="downQuantityProduct(cart)">-</button></div>
+                                <div class="form-group pull-left">
+                                    <input min="1" type="number" class="form-control number-input" id="" ng-change="changeQuantityProductInput(cart)" ng-model="cart.quantity" style="width: 60px;" ng-model-options="{ debounce: 850 }">
+                                </div>
+                                <div class="form-group"><button class="btn btn-default" ng-click="upQuantityProduct(cart)">+</button></div>
+                            </form>
+                        </div>
+                        <div class="col-md-2 col-xs-5">
+                            <p class="text-right">Tổng</p>
+                            <p class="text-right section-title">{{ cart.product.pricexuat * cart.quantity |  currency:'':0}} VND</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="clearfix maya-small-padding"></div>
+            </div>
+
+            <div class="col-lg-4 col-md-4">
+                <div class="box-bg-white" style="width: 100%">
+                    <div class="clearfix maya-small-padding"></div>
+                    <h3 class="text-left text-oswald">Tổng tiền giỏ hàng : {{ totalAmount | currency:'':0}} VND</h3>
+                    <h3 class="text-left text-oswald">Tổng tiền thanh toán : {{ selectedTotalAmount | currency:'':0}} VND</h3>
+                    <p class="text-right text-gray-3 text-medium text-thin"></p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="text-gray-2 text-thin"><br></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="text-right"><br><a class="text-black text-underline" href="mailto: info@backtokimi.com"></a></p>
+                        </div>
+                    </div>
+                    <div class="clearfix maya-small-padding"></div>
+                    <a ng-click="PaymentAction()" class="btn btn-primary pull-right button-black text-white">Tiến hành thanh toán</a>
+                    <div class="clearfix maya-small-padding"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div><!-- /.container -->
+
+<!--include footer-->
+<div class="include-footer"></div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="./js/bootstrap.min.js"></script>
+
+<!--kimi basic js-->
+<script src="./js/kimi.js"></script>
+<script src="js/user/cart.js"></script>
+
+</body>
+</html>

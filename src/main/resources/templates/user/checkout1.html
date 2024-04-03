@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" ng-app="bannoithatonline">
+
+<head>
+   
+
+    <title>Checkout 1</title>
+
+    	<!--+++++++++++++ CSS THEME ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<link rel="stylesheet" href="/taiNguyenCuaDung/css/index.css">
+	<link rel="stylesheet" href="/taiNguyenCuaDung/css/indexcolor.css">
+	<link rel="stylesheet" href="/taiNguyenCuaDung/css/theme1.css">
+	<link rel="stylesheet" href="/taiNguyenCuaDung/css/theme2.css">
+	<link rel="stylesheet" href="/taiNguyenCuaDung/css/theme3.css">
+
+    	<!--+++++++++++++ JS THEME ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<script type="text/javascript" src="taiNguyenCuaDung/js/jquery.min.js"></script>
+	<script type="text/javascript" src="taiNguyenCuaDung/js/theme.js"></script>
+
+    <link rel="preconnect" href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;display=swap"
+		crossorigin="">
+	<link rel="preload stylesheet" href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;display=swap"
+		as="style">
+	<link rel="preload" href="//theme.hstatic.net/200000796751/1001150659/14/fontawesome-webfont.woff?v=788" as="font"
+		type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="//theme.hstatic.net/200000796751/1001150659/14/fontawesome-webfont.woff2?v=788" as="font"
+		type="font/woff2" crossorigin="anonymous">
+
+	<link rel="preload stylesheet" href="//theme.hstatic.net/200000796751/1001150659/14/style-themes.scss.css?v=788"
+		as="style">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/kimi.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Add these script and style references in your HTML -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+        #paymentMethod {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 65%;
+            height: 100%;
+        }
+
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+    </style>
+
+    <!--+++++++++++++ CSS THEME ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<link rel="stylesheet" href="/taiNguyenCuaDung/css/index.css">
+<link rel="stylesheet" href="/taiNguyenCuaDung/css/indexcolor.css">
+<link rel="stylesheet" href="/taiNguyenCuaDung/css/theme1.css">
+<link rel="stylesheet" href="/taiNguyenCuaDung/css/theme2.css">
+<link rel="stylesheet" href="/taiNguyenCuaDung/css/theme3.css">
+
+
+<!--+++++++++++++ JS THEME ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<script type="text/javascript" src="taiNguyenCuaDung/js/jquery.min.js"></script>
+<script type="text/javascript" src="taiNguyenCuaDung/js/theme.js"></script>
+<link rel="preconnect" href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;display=swap"
+    crossorigin="">
+<link rel="preload stylesheet" href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;display=swap"
+    as="style">
+<link rel="preload" href="//theme.hstatic.net/200000796751/1001150659/14/fontawesome-webfont.woff?v=788" as="font"
+    type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="//theme.hstatic.net/200000796751/1001150659/14/fontawesome-webfont.woff2?v=788" as="font"
+    type="font/woff2" crossorigin="anonymous">
+
+<link rel="preload stylesheet" href="//theme.hstatic.net/200000796751/1001150659/14/style-themes.scss.css?v=788"
+    as="style">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div data-th-insert="~{include/navbar.html}"></div>
+
+    <div class="container-fluid" ng-controller="checkoutController">
+
+        <div class="kimi-container">
+            <!--breadcrumb start-->
+            <ol class="breadcrumb hidden-xs">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shoppingCart.html">Cart</a></li>
+                <li>Customer Information</li>
+                <li>Shipping Mehtod</li>
+                <li>Payment Method</li>
+            </ol>
+            <div class="clearfix"></div>
+
+            <div class="box-bg-gray visible-xs less-padding-left">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+                <a style="margin-right: 15px;" class="text-black" role="button" data-toggle="collapse"
+                    href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Show Order Summary <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </a>
+
+                <strong class="pull-right">IDR 225.000</strong>
+
+                <div class="clearfix"></div>
+                <div class="collapse" id="collapseExample">
+                    <div class="row">
+                        <div class="box-bg-gray">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <img src="images/brownies.jpg" width="100%">
+                                </div>
+                                <div class="col-xs-5">
+                                    <span>Brownies Chocolate</span><br />
+                                    <small>Sucicakes</small>
+                                </div>
+                                <div class="col-xs-4">
+                                    <p class="text-right">IDR 50.000</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <img src="images/lapisSurabaya.jpg" width="100%">
+                                </div>
+                                <div class="col-xs-5">
+                                    <span>Brownies Chocolate</span><br />
+                                    <small>Sucicakes</small>
+                                </div>
+                                <div class="col-xs-4">
+                                    <p class="text-right">IDR 50.000</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <form class="form-inline">
+                                <div class="col-xs-8">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="" placeholder="Discount Code">
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <button type="submit" class="btn btn-default button-black-medium">Apply</button>
+                                </div>
+                            </form>
+                            <hr />
+
+                            <div class="row">
+                                <div class="col-xs-6">Subtotal</div>
+                                <div class="col-xs-6">
+                                    <p class="text-right"><strong>IDR 207.000</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-6">Shipping + Trx Fee</div>
+                                <div class="col-xs-6">
+                                    <p class="text-right"><strong> - </strong></p>
+                                </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="pull-left">Total</div>
+                            <div class="pull-right"><strong>IDR 232.000</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="box-bg-white" style="width:100%">
+                        <h3 class="section-title">Thông tin người mua: </h3>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form>
+                                    <div class="form-group row">
+                                        <p for="fullname" class="col-sm-2 col-form-label"
+                                            style="margin-top: 5px; font-weight: bold;">Họ và tên:</p>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="fullname"
+                                                ng-model="customer.name" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="fullname" class="col-sm-2 col-form-label"
+                                            style="margin-top: 5px; font-weight: bold;">Số điện thoại:</p>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="" ng-model="customer.phone"
+                                                disabled>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row" style="margin-bottom: 5%;">
+                                        <p for="fullname" class="col-sm-2 col-form-label"
+                                            style="margin-top: 5px; font-weight: bold;">Địa chỉ email:</p>
+                                        <div class="col-sm-10">
+                                            <input type="email" class="form-control" id=""
+                                                ng-model="customer.account.email" disabled>
+                                        </div>
+                                    </div>
+
+
+                                    
+                                    <!-- Trong template HTML của bạn -->
+                                    <span>Địa chỉ của bạn:</span>
+                                    <div style="margin-bottom: 5%; margin-top: 1%;">
+                                        <div class="form-check" ng-repeat="addr in address" style="margin-bottom: 1%;">
+                                            <input class="form-check-input"  type="radio" id="{{addr.addressID}}" ng-model="selectedAddress" value="{{addr.addressID}}" ng-checked="selectedAddressID === addr.addressID"
+                                                name="addressGroup" ng-change="onAddressSelected(addr)" ng-click="isSelectedAddress(addr)"  />
+                                            <span class="form-check-label" style="margin: 17px;"> Số nhà: {{addr.sonha }} - Đường: {{addr.duong}} - {{ addr.phuongxa }} - {{ addr.quanhuyen }} - {{ addr.tinhthanhpho }}</span>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <span>Bạn muốn thay đổi địa chỉ khác ?</span>
+                                    <a class="" ng-click="showSelectedInfoModal()">Thay đổi</a>
+
+
+                                    
+                                    
+
+                                <div style="margin-bottom: 20px;">
+                                    <label>Chọn phương thức thanh toán:</label>
+                                    <select id="paymentMethod" class="form-control" ng-model="selectedPaymentMethod"
+                                        ng-change="onPaymentMethodChange()"
+                                        ng-options="paymentOption.paymentid as paymentOption.paymentname for paymentOption in paymentOptions">
+                                        <option value="" disabled selected>Hãy chọn phương thức thanh toán</option>
+                                    </select>
+                                </div>
+
+                                <a href="/cart" class="btn btn-default pull-left btn-warning text-black hidden-xs"
+                                    style="border-radius: 10px;">Giỏ hàng</a>
+                                <a id="checkoutButtonF" ng-click="continuePayment()"
+                                    class="btn btn-default pull-right btn-primary hidden-xs"
+                                    style="border-radius: 10px;">Tiếp tục thanh toán</a>
+
+                                    <a id="checkoutButtonL" ng-click="continuePayment()"
+                                    class="btn btn-default pull-right btn-primary hidden-xs"
+                                    style="border-radius: 10px;">Thanh toán</a>
+
+
+                                <div class="clearfix maya-small-padding"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-5">
+                    <div class="box-bg-white hidden-xs" style="width: 100%;">
+                        <div class="row" ng-repeat="payment in products">
+                            <div ng-repeat="product in payment.Product">
+                                <div class="col-lg-4 col-md-4 col-xs-6 less-padding-right">
+                                    <img class="img img-thumbnail" ng-src="{{product.imageUrl}}" width="100%">
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-xs-12">
+                                    <span>{{product.product.productname}}</span><br />
+                                    <span class="text-gray-2 text-thin">Số lượng : {{product.quantity}}</span>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-xs-5">
+                                    <p class="text-right">{{product.product.pricexuat | currency : '' :0}} VND</p>
+                                </div>
+                                <div class="clearfix maya-small-padding"></div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <form style="margin-left: 10%;margin-right: 10%;">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-12"><input type="text" class="form-control" id="discountInput"
+                                            placeholder="Nhập mã giảm giá ?" ng-model-options="{ debounce: 1500 }"
+                                            ng-model="discountCode" ng-change="discount()" ng-click="checkClear()" ng-disabled="isDiscountInputDisabled">
+                                    </div>
+                                    <!-- <div class="col-sm-4"><button type="submit" class="btn btn-default button-black-medium btn-block" ng-click="discount()">Áp dụng</button></div> -->
+                                </div>
+                            </div>
+
+                        </form>
+                        <hr />
+
+                        <div class="row">
+                            <div class="col-sm-8">Tổng tiền</div>
+                            <div class="col-sm-4 text-right">{{products[0].TotalPayment | currency : '' :0}} VND</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-8 less">Tiền giảm giá: </div>
+                            <div class="col-sm-4 text-right">{{valueDiscountCode | currency : '' :0}} VND</div>
+                        </div>
+
+
+                        <hr />
+                        <div class="row">
+                            <div class="col-sm-4 less">Số tiền cần thanh toán</div>
+                            <div class="col-sm-8 text-right">
+                                <h3 class="less-margin">{{products[0].TotalPayment - valueDiscountCode | currency : ''
+                                    :0}} VND</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+
+
+                    <div class="box-bg-white" style="width: 100%;">
+                        <div class="clearfix maya-small-padding"></div>
+                        <h3 class="text-right text-oswald">Need Help ? </h3>
+                        <p class="text-right text-gray-3 text-medium text-thin">Find any troubles? We will respond. Call
+                            or write question by email</p>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="text-gray-2 text-thin">Everyday<br>from 9.00 - 18.00</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="text-right">+62 21 567898765<br><a class="text-black text-underline"
+                                        href="mailto: info@backtokimi.com">info@backtokimi.com</a></p>
+                            </div>
+                        </div>
+                        <div class="clearfix maya-small-padding"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /.container -->
+
+    <!--include footer-->
+    <div class="include-footer"></div>
+
+
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!--kimi basic js-->
+   
+    <script src="js/user/checkout.js"></script>
+
+    
+
+    <!-- SCRIPT THEME -->
+	<script type="text/javascript" src="taiNguyenCuaDung/js/scripts.js" defer=""></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
